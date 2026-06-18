@@ -1,0 +1,648 @@
+/* ===================================================
+   PENGATURAN RESET GLOBAL BROWSER
+=================================================== */
+body {
+    /* margin: 0: Menghilangkan jarak luar bawaan browser di pinggiran layar agar website mepet pas di ujung screen */
+    margin : 0;
+    /* padding: 0: Menghilangkan jarak dalam bawaan browser agar konten tidak tergeser otomatis */
+    padding: 0;
+}
+
+/* ===================================================
+   HEADER / NAVBAR (KUSTOMISASI GAYA VISUAL)
+=================================================== */
+
+/* .navbar-nav .nav-link: Mengincar elemen teks link menu navigasi yang ada di dalam list navbar */
+.navbar-nav .nav-link {
+    /* font-weight: 600: Mengatur ketebalan huruf teks menu biar kelihatan agak tebal (Semi-Bold) dan tegas */
+    font-weight: 600;
+    /* color: #444: Mengubah warna default teks menu menjadi abu-abu gelap agar tidak terlalu kaku dibanding warna hitam pekat */
+    color: #110101;
+}
+
+/* .navbar-nav .nav-link:hover: Mengatur efek visual ketika kursor mouse didekatkan atau menyentuh teks menu */
+.navbar-nav .nav-link:hover {
+    /* color: #0962fa: Mengubah warna teks secara interaktif menjadi biru cerah saat kursor mouse berada di atas menu tersebut */
+    color: #0962fa;
+}
+
+/* ===================================================
+   @media (max-width: 800px): Aturan CSS khusus yang hanya aktif ketika website dibuka di layar HP/Mobile dengan lebar maksimal 800px
+=================================================== */
+@media (max-width: 800px) {
+
+    /* .navbar-collapse: Mengatur kotak wadah menu navigasi yang melorot ke bawah saat versi mobile */
+    .navbar-collapse {
+        /* position: absolute: Memaksa kotak menu melayang bebas di atas konten lain, jadi pas kebuka dia tidak bakal mendorong logo ke bawah */
+        position: absolute;      
+        /* top: 60px: Mengatur jarak vertikal kotak menu melayang agar pas berada 60 piksel di bawah bar navbar utama */
+        top: 60px;              
+        /* right: 10px: Mengatur posisi kotak menu agar menempel di sebelah kanan layar dengan jarak 10 piksel dekat tombol hamburger */
+        right: 10px;            
+        /* background: white: Memberikan warna latar belakang kotak menu mobile menjadi putih bersih agar teks menunya jelas terbaca */
+        background: white;      
+        /* padding: 10px 15px: Memberikan jarak dalam kotak (10px atas-bawah, 15px kiri-kanan) biar teks menu tidak mepet ke pinggiran kotak */
+        padding: 10px 15px;
+        /* border-radius: 10px: Membuat keempat sudut pinggiran kotak menu mobile menjadi melengkung/bulat biar kelihatan modern */
+        border-radius: 10px;
+        /* box-shadow: Memberikan efek bayangan hitam transparan di sekeliling kotak menu biar terkesan timbul dan melayang di atas konten web */
+        box-shadow: 0 5px 15px rgba(79, 71, 71, 0.2);
+        /* width: 180px: Mengunci lebar maksimal kotak menu mobile agar ringkas berukuran 180 piksel saja, mirip seperti kotak dropdown kecil */
+        width: 180px;          
+    }
+
+    /* .navbar-nav: Mengincar barisan list menu di dalam wadah navigasi mobile */
+    .navbar-nav {
+        /* text-align: left: Memaksa seluruh teks menu di dalam kotak mobile berbaris rata kiri secara vertikal biar rapi */
+        text-align: left;
+    }
+}
+
+/* .navbar-toggler: Mengincar tombol kotak hamburger (garis tiga) yang muncul di versi mobile */
+.navbar-toggler {
+    /* padding: 2px 6px: Mengecilkan jarak dalam tombol (2px atas-bawah, 6px kiri-kanan) biar ukuran tombol kotaknya jadi lebih minimalis */
+    padding: 2px 6px;     
+    /* font-size: 14px: Mengecilkan ukuran visual ikon garis tiga di dalam tombol agar pas dengan ukuran layar HP yang kecil */
+    font-size: 14px; 
+    border: none;       /* Menghilangkan garis pinggir bawaan kotak */
+    outline: none;      /* Menghilangkan garis fokus hitam melengkung saat diklik */
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: none !important;
+    box-shadow: none !important;    
+    
+}
+
+/* ===================================================
+   HERO VIDEO (PENGATURAN VISUAL BACKGROUND & ANIMASI)
+=================================================== */
+
+/* #hero-video: Mengatur area section utama pembungkus video dan teks */
+#hero-video {
+    /* position: relative: Menjadi patokan dasar (jangkar) koordinat bagi elemen di dalamnya yang pakai position absolute (seperti teks-hero) */
+    position: relative;
+    /* height: 100vh: 100% Viewport Height, artinya tinggi kotak ini dipaksa pas memenuhi 100% tinggi layar laptop atau HP jenis apa pun */
+    height: 100vh; 
+    /* overflow: hidden: Memotong semua konten yang meluber keluar dari batas area kotak 100vh ini agar tidak muncul scrollbar aneh */
+    overflow: hidden;
+    /* padding: 0: Menghilangkan jarak dalam agar area video benar-benar mepet sampai ke ujung layar browser */
+    padding: 0;
+}
+
+/* #hero-video video: Mengincar elemen video di dalam section hero */
+#hero-video video {
+    /* width & height 100%: Memaksa ukuran video melar memenuhi seluruh lebar dan tinggi dari section induknya (#hero-video) */
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover: Trik sakti CSS biar video otomatis memotong dan menyesuaikan diri secara proporsional tanpa kelihatan gepeng atau penyok di layar HP maupun laptop */
+    object-fit: cover;
+}
+
+/* .teks-hero: Mengincar kotak pembungkus tulisan judul di atas video */
+.teks-hero {
+    /* position: absolute: Membuat kotak teks melayang bebas di atas video dan posisinya bisa digeser pakai koordinat top/left */
+    position: absolute;
+    /* top & left 50%: Mendorong sudut kiri-atas kotak teks tepat berada di titik tengah layar (50% dari atas dan 50% dari kiri) */
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, -50%): Menarik balik kotak teks sebanyak setengah dari ukurannya sendiri agar posisinya benar-benar pas di tengah-tengah layar secara simetris */
+    transform: translate(-50%, -50%);
+
+    /* text-align: center: Membuat barisan tulisan di dalam kotak menjadi rata tengah */
+    text-align: center;
+    /* color: white: Mengubah warna teks judul menjadi putih bersih agar kontras dan mudah dibaca di atas video */
+    color: white;
+
+    /* 
+       animation: fadeHero 5s ease-in-out forwards: 
+       Mengaktifkan animasi bernama "fadeHero" selama 5 detik, gerakannya halus di awal dan akhir (ease-in-out), 
+       dan kata "forwards" bikin teks tetap bertahan di kondisi terakhir setelah animasinya selesai berjalan.
+    */
+    animation: fadeHero 5s ease-in-out forwards;
+}
+
+/* 
+   @keyframes fadeHero: 
+   Instruksi atau skenario jalannya animasi "fadeHero" dari detik ke-0 sampai detik ke-5 berdasarkan tingkat transparansi (opacity)
+*/
+@keyframes fadeHero {
+    0% { opacity: 0; }    /* Pas detik pertama dimulai (0%), tulisan masih gaib alias tidak kelihatan sama sekali */
+    20% { opacity: 1; }   /* Pas jalan ke 20% waktu, tulisan pelan-pelan muncul jelas (nyala penuh) */
+    80% { opacity: 1; }   /* Dari 20% sampai ke 80% waktu, tulisan sengaja ditahan biar tetap muncul jelas untuk dibaca pengunjung */
+    100% { opacity: 0; }  /* Di akhir animasi (100%), tulisan pelan-pelan menghilang kembali (menjadi transparan) */
+}
+
+/* ===================================================
+   SECTION UMUM (SETTINGAN GLOBAL UNTUK SEMUA SECTION)
+=================================================== */
+
+section {
+    /* padding: 40px 0: Memberikan jarak luar dalam (40px atas-bawah, 0 kiri-kanan) antar section biar konten antar bab tidak saling menempel rapat */
+    padding: 40px 0; 
+    /* scroll-margin-top: 60px: Trik kencang biar pas menu navbar diklik, halaman bergulir ke section tujuan dengan sisa jarak 60px di atas, jadi judul bab tidak tertutup ketutupan oleh navbar sticky */
+    scroll-margin-top: 60px; 
+}
+
+/* ===================================================
+   SECTION TENTANG (KUSTOMISASI KHUSUS BADAN PROFIL)
+=================================================== */
+
+#tentang {
+    /* background: #fff: Mengunci latar belakang area tentang agar berwarna putih bersih */
+    background: #fff;
+    /* padding: 60px 0: Memberikan ruang vertikal kosong (60px atas dan bawah) agar tampilan teks profil terlihat lebih lega dan profesional */
+    padding: 60px 0; 
+}
+
+/* #tentang h2: Mengincar elemen judul utama "Mengenal Lebih Dekat Pulo Aceh" */
+#tentang h2 {
+    /* text-align: center: Membuat posisi teks judul berada tepat di tengah-tengah halaman */
+    text-align: center;   
+    /* margin-bottom: 40px: Memberikan jarak renggang sebanyak 40 piksel ke bawah sebelum menyentuh barisan foto */
+    margin-bottom: 40px;
+    /* font-size: 32px: Mengatur ukuran huruf judul menjadi besar dan dominan sebagai penanda bab */
+    font-size: 32px; 
+    /* font-weight: 700: Menebalkan teks judul (Bold tingkat tinggi) agar terlihat kokoh */
+    font-weight: 700;
+    /* color: #222: Mengubah warna huruf menjadi hitam arang agar terlihat elegan dan lembut di mata */
+    color: #222;
+}
+
+/* .grid-2: Mengatur tata letak pembungkus dua kolom foto pulau */
+.grid-2 {
+    /* display: flex: Mengaktifkan mode Flexbox untuk menyusun kotak foto secara horizontal (berjejer ke samping) */
+    display: flex;
+    /* justify-content: center: Mendorong barisan kolom foto agar posisinya seimbang pas di tengah-tengah halaman web */
+    justify-content: center;
+    /* gap: 50px: Memberikan jarak pemisah antar kotak foto sejauh 50 piksel biar tidak saling dempet */
+    gap: 50px;            
+    /* margin-bottom: 50px: Memberikan spasi jarak renggang sebanyak 50 piksel di bawah foto sebelum masuk ke baris paragraf teks */
+    margin-bottom: 50px;
+    /* max-width: 1100px: Membatasi lebar maksimal bentangan grid foto agar mentok di ukuran 1100 piksel dan tidak melar kebesaran */
+    max-width: 1100px;    
+    /* margin-left & right auto: Trik sakti CSS untuk membuat kotak grid otomatis membagi sisa ruang dan diam tepat di tengah halaman */
+    margin-left: auto;    
+    margin-right: auto;   
+    /* padding: 0 20px: Memberikan bantalan jarak dalam 20 piksel di kiri-kanan biar pas layar menyusut foto tidak menempel ke dinding browser */
+    padding: 0 20px;
+}
+
+/* .card-item: Mengatur masing-masing kotak foto individu */
+.card-item {
+    /* width: 380px: Mengunci lebar permanen untuk masing-masing kotak foto sebesar 380 piksel */
+    width: 380px;         
+    /* text-align: center: Membuat teks nama pulau di dalam kotak ini otomatis berada di posisi tengah bawah foto */
+    text-align: center;
+}
+
+/* .card-item img: Mengincar elemen gambar di dalam kotak foto kustom */
+.card-item img {
+    /* width: 100%: Memaksa file gambar melebar penuh mengikuti lebar maksimal dari kotak induknya (.card-item yaitu 380px) */
+    width: 100%;
+    /* height: 260px: Mengunci tinggi gambar agar seragam di angka 260 piksel, jadi meskipun file foto aslinya beda ukuran, hasilnya tetap sama rata */
+    height: 260px;        
+    /* object-fit: cover: Trik potong gambar otomatis agar foto menyesuaikan area kotak 380x260 secara proporsional tanpa kelihatan penyet atau ketarik */
+    object-fit: cover;
+    /* border-radius: 14px: Membuat keempat sudut pinggiran gambar menjadi melengkung halus/bulat (Aesthetic) */
+    border-radius: 14px;  
+    /* box-shadow: Memberikan efek bayangan hitam halus di bawah gambar agar fotonya terlihat hidup dan timbul keluar dari latar putih */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12); 
+}
+
+/* .card-item h4: Mengatur teks nama pulau ("Pulo Nasi" dan "Pulo Breuh") di bawah foto */
+.card-item h4 {
+    /* margin-top: 18px: Memberikan jarak renggang ke atas sebanyak 18 piksel dari bawah batas gambar */
+    margin-top: 18px;
+    /* font-size: 20px: Mengatur ukuran huruf teks nama pulau */
+    font-size: 20px;      
+    /* font-weight: 600: Mengatur ketebalan teks menjadi Semi-Bold */
+    font-weight: 600;
+    /* color: #333: Warna teks abu-abu gelap agar kontrasnya pas */
+    color: #333;
+}
+
+/* .paragraf: Mengatur formating teks cerita panjang di bawah foto */
+.paragraf {
+    /* max-width: 1100px: Membatasi panjang bentangan baris teks cerita agar sama lebar dengan barisan batas foto di atasnya */
+    max-width: 1100px;    
+    /* margin: 0 auto 22px: Mengatur spasi luar (0 atas, otomatis kiri-kanan biar tulisan di tengah, dan 22px jarak renggang ke bawah antar paragraf) */
+    margin: 0 auto 22px;  
+    /* text-align: justify: Format tulisan rata kiri-kanan otomatis seperti layout koran atau buku cetak biar terlihat rapi terstruktur */
+    text-align: justify;  
+    /* text-indent: 50px: Memberikan ketukan baris pertama menjorok ke dalam sejauh 50 piksel pada setiap awal paragraf baru */
+    text-indent: 50px;    
+    /* line-height: 1.9: Mengatur spasi jarak antar baris kalimat menjadi agak renggang (1.9) agar teks nyaman dibaca dan tidak tumpang tindih */
+    line-height: 1.9;     
+    color: #333;          
+    /* font-size: 16.5px: Mengatur ukuran huruf tulisan cerita agar jelas dibaca di layar monitor komputer */
+    font-size: 16.5px;    
+    /* padding: 0 20px: Bantalan spasi aman 20 piksel di kiri dan kanan agar tulisan tidak menempel ke pinggiran browser */
+    padding: 0 20px;      
+}
+
+/* ===================================================
+   [CSS MEDIA QUERY] PERBAIKAN KHUSUS LAYAR HP (MOBILE RESPONSIVE)
+   Aktif otomatis saat website dibuka di bawah ukuran layar 768px
+=================================================== */
+@media (max-width: 768px) {
+    
+    /* .grid-2 dalam versi mobile HP */
+    .grid-2 {
+        /* flex-direction: column: Mengubah susunan baris dari horizontal (ke samping) menjadi vertikal (menumpuk ke bawah) karena layar HP sempit */
+        flex-direction: column; 
+        /* align-items: center: Memastikan posisi foto yang menumpuk ke bawah tadi tetap lurus pas di tengah layar HP */
+        align-items: center;
+        /* gap: 30px: Mengecilkan jarak renggang antar foto menjadi 30 piksel saja agar hemat ruang di layar HP */
+        gap: 30px; 
+    }
+
+    /* .card-item dalam versi mobile HP */
+    .card-item {
+        /* width: 100%: Kotak foto diperbolehkan melar mengikuti lebar layar HP */
+        width: 100%;
+        /* max-width: 320px: Membatasi agar di HP kotak foto tidak melar kebesaran, mentok di lebar proporsional 320 piksel saja */
+        max-width: 320px;
+    }
+
+    /* .paragraf dalam versi mobile HP */
+    .paragraf {
+        /* text-indent: 20px: Mengecilkan ketukan menjorok baris pertama paragraf menjadi 20 piksel saja agar tidak terlalu memakan space di HP */
+        text-indent: 20px; 
+        /* font-size: 15px: Mengecilkan sedikit ukuran huruf menjadi 15 piksel agar pas dengan proporsi layar handphone */
+        font-size: 15px;    
+        /* line-height: 1.7: Merapatkan sedikit spasi baris kalimat (1.7) agar teks cerita tidak terlalu memanjang ke bawah di layar HP */
+        line-height: 1.7;
+    }
+    
+    /* #tentang h2 dalam versi mobile HP */
+    #tentang h2 {
+        /* font-size: 24px: Mengecilkan ukuran judul sub-bab menjadi 24 piksel agar pas dan tidak kebesaran memenuhi layar HP */
+        font-size: 24px;
+    }
+}
+
+/* ===================================================
+   CSS MENU DESTINASI MODEL VERTIKAL (KUSTOMISASI GRID SLIDER)
+=================================================== */
+
+/* #destinasi: Mengincar area section utama pembungkus fitur slider objek wisata */
+#destinasi {
+    /* background: #f9f9f9: Memberikan warna latar belakang abu-abu sangat muda biar kontras dengan navbar putih di atasnya */
+    background: #f9f9f9;
+    /* padding: Jarak dalam (30px atas, 0 kanan, 80px bawah biar lega tempat dots, 0 kiri) */
+    padding: 30px 0 80px 0;
+    /* scroll-margin-top: 70px: Jarak pengaman pas layar bergulir dari navbar biar judul section tidak tertabrak menu atas */
+    scroll-margin-top: 70px;
+}
+
+/* .judul-destinasi: Mengincar judul utama "Tempat Unggulan Pulo Aceh" */
+.judul-destinasi {
+    /* text-align: center: Membuat posisi teks judul berada tepat di tengah-tengah halaman */
+    text-align: center;   
+    /* margin-bottom: 50px: Memberikan jarak spasi kosong ke bawah sebanyak 50 piksel sebelum menyentuh slider kartu */
+    margin-bottom: 50px; 
+    /* font-size: 32px: Mengatur ukuran huruf judul bab utama */
+    font-size: 32px;
+    /* font-weight: 700: Menebalkan teks judul biar kelihatan tegas */
+    font-weight: 700;
+    /* color: #222: Warna hitam lembut agar nyaman dipandang mata */
+    color: #222;
+}
+
+/* .posisi-relatif: Wadah pembungkus luar area slider */
+.posisi-relatif {
+    /* position: relative: Berfungsi sebagai jangkar patokan koordinat bagi tombol panah kiri-kanan yang pakai position absolute */
+    position: relative; 
+    /* padding: 0 45px: Memberikan spasi kiri-kanan sebesar 45px sebagai ruang kosong tempat tombol panah melayang */
+    padding: 0 45px; 
+}
+
+/* .jendela-slider: Berperan sebagai "topeng" atau "bingkai jendela" pembatas slider */
+.jendela-slider {
+    /* overflow: hidden: Fungsi sakti untuk memotong dan menyembunyikan sisa kartu destinasi yang mengantre di sisi kanan layar agar tidak bikin web meluber memanjang ke samping */
+    overflow: hidden;
+    /* width: 100%: Lebar jendela mengikuti penuh lebar container induknya */
+    width: 100%;
+}
+
+/* .rel-slider: Wadah super panjang tempat seluruh 7 kartu destinasi berbaris horizontal menyamping */
+.rel-slider {
+    /* display: flex: Mengaktifkan mode Flexbox agar semua kartu otomatis berjejer rapi ke samping kanan seperti gerbong kereta */
+    display: flex;
+    /* gap: 20px: Memberikan jarak pemisah antar kartu destinasi sejauh 20 piksel */
+    gap: 20px;
+    /* transition: transform 0.5s ease-in-out: Efek animasi geser halus selama 0.5 detik saat JavaScript memindahkan urutan gerbong kartu */
+    transition: transform 0.5s ease-in-out; 
+    /* width: max-content: Memaksa lebar rel melar otomatis sepanjang total ukuran seluruh kartu yang berbaris di dalamnya */
+    width: max-content;
+}
+
+/* .kartu-vertikal: Mengatur masing-masing kotak kartu individu objek wisata */
+.kartu-vertikal {
+    /* position: relative: Menjadi acuan koordinat bagi kotak teks deskripsi kustom (.konten-dalam-foto) yang menempel absolut di bawahnya */
+    position: relative;
+    /* flex: 0 0 290px: Mengunci ukuran basis flex kartu agar tidak bisa menciut atau melar dari ukuran asli 290 piksel */
+    flex: 0 0 290px; 
+    /* width & height: Mengunci ukuran dimensi kotak kartu setinggi 400px dan selebar 290px sesuai sketsa rancangan vertikal */
+    width: 290px;    
+    height: 400px;   
+    /* border-radius: 20px: Membuat keempat sudut pinggiran kartu menjadi melengkung bulat dan rapi */
+    border-radius: 20px;
+    /* overflow: hidden: Memotong ujung gambar destinasi di dalam agar ikut melengkung rapi sesuai sudut border-radius 20px kartu */
+    overflow: hidden;
+    /* box-shadow: Memberikan efek bayangan lembut di sekeliling kartu agar terlihat estetik dan timbul */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* .kartu-vertikal img: Mengincar file gambar objek wisata di dalam kartu vertikal */
+.kartu-vertikal img {
+    /* width & height 100%: Memaksa gambar melebar dan meninggi penuh mengisi 100% ruang kotak kartu vertikal */
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover: Memotong gambar secara proporsional agar foto destinasi tidak kelihatan gepeng atau penyet saat dipaksa masuk ke dimensi kartu */
+    object-fit: cover;
+    /* display: block: Menghilangkan celah spasi kosong kecil bawaan browser di bawah gambar */
+    display: block;
+}
+
+/* .konten-dalam-foto: Mengatur kotak teks informasi yang mengambang manis di dalam bagian bawah gambar kartu */
+.konten-dalam-foto {
+    /* position: absolute: Memaksa kotak teks melayang bebas di atas gambar dan posisinya dikunci menempel di dinding bawah kartu */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* width: 100%: Lebar kotak teks memenuhi kelebaran area dasar kartu destinasi */
+    width: 100%;
+    /* padding: 25px 20px: Jarak dalam (25px atas-bawah, 20px kiri-kanan) biar tulisan cerita memiliki spasi yang ideal */
+    padding: 25px 20px;
+    /* background: linear-gradient: Trik gradasi warna hitam transparan dari bawah ke atas. Fungsinya sebagai "shadow text" agar tulisan putih di atasnya tetap terbaca jelas meskipun warna foto di belakangnya cerah/putih */
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0) 100%);
+    /* color: white: Mengubah seluruh warna teks judul kecil dan paragraf di dalam kartu menjadi warna putih bersih */
+    color: white;
+}
+
+/* .konten-dalam-foto h3: Mengatur judul nama tempat wisata di dalam kartu (misal: "Pantai Nipah") */
+.konten-dalam-foto h3 {
+    /* font-size: 18px: Ukuran huruf disesuaikan biar pas masuk ke dalam dimensi kartu vertikal yang ramping */
+    font-size: 18px; 
+    /* font-weight: 700: Menebalkan huruf judul tempat */
+    font-weight: 700;
+    /* margin-bottom: 6px: Memberikan spasi jarak 6 piksel ke bawah sebelum menyentuh teks deskripsi pendek */
+    margin-bottom: 6px;
+    color: #ffffff;
+}
+
+/* .konten-dalam-foto p: Mengatur teks deskripsi singkat di bawah judul tempat dalam kartu */
+.konten-dalam-foto p {
+    /* font-size: 12px: Ukuran font dibuat kecil minimalis agar menghemat ruang dalam kartu */
+    font-size: 12px; 
+    /* line-height: 1.4: Mengatur jarak spasi antar baris kalimat deskripsi */
+    line-height: 1.4;
+    /* color: #e0e0e0: Warna putih keabu-abuan tipis agar terlihat kalem dan aesthetic */
+    color: #e0e0e0;
+    margin: 0;
+}
+
+/* .panah-luar: Mengatur bentuk tombol lingkaran panah manual navigasi slider (❮ dan ❯) */
+.panah-luar {
+    /* position: absolute: Membuat tombol melayang bebas di atas slider kartu */
+    position: absolute; 
+    /* top: 50% dan transform: translateY(-50%): Trik CSS kaku untuk mengunci posisi tombol panah tepat berada di tengah-tengah tinggi slider secara vertikal */
+    top: 50%; 
+    transform: translateY(-50%); 
+    /* background: white: Memberikan warna dasar bulatan tombol warna putih bersih */
+    background: white;
+    border: none;
+    /* width & height 45px dengan border-radius 50%: Mengunci dimensi tombol kotak 45px lalu dipotong melingkar menjadi bulat sempurna */
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; 
+    /* box-shadow: Memberikan efek bayangan di sekeliling bulatan tombol agar terlihat menonjol keluar dari gambar kartu */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
+    /* font-size: 18px: Mengatur ukuran simbol panah di dalam bulatan */
+    font-size: 18px;
+    color: #333;
+    /* cursor: pointer: Mengubah kursor mouse menjadi ikon jari tangan menunjuk saat berada di atas tombol agar pengguna tahu ini bisa diklik */
+    cursor: pointer;
+    /* transition: 0.2s: Animasi transisi jeda waktu 0.2 detik saat tombol menerima efek hover mouse */
+    transition: 0.2s; 
+    /* display: flex dengan align-items & justify-content center: Menggunakan susunan Flexbox agar simbol panah berada tepat di poros tengah bulatan */
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    /* z-index: 10: Angka lapisan tinggi agar tombol panah berada di atas lapisan gerbong kartu dan tidak tertutup gambar */
+    z-index: 10;
+}
+
+/* .panah-luar:hover: Efek ketika kursor mouse menyentuh bulatan tombol panah */
+.panah-luar:hover {
+    /* background: #0962fa: Mengubah warna bulatan tombol menjadi warna biru cerah */
+    background: #0962fa;
+    /* color: white: Mengubah simbol panah di dalamnya menjadi warna putih bersih */
+    color: white;
+}
+
+/* .panah-kiri / .panah-kanan: Menentukan posisi labuhan masing-masing tombol panah di ujung kiri dan kanan kontainer */
+.panah-kiri { left: 0; }
+.panah-kanan { right: 0; }
+
+/* .dots-wadah-kustom: Mengatur barisan titik indikator bulat di bawah slider */
+.dots-wadah-kustom {
+    /* display: flex dengan justify & align center: Menyusun barisan titik bulat secara horizontal lurus tepat di tengah halaman bawah */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 8px: Jarak renggang antar titik bulat sejauh 8 piksel */
+    gap: 8px;
+    /* margin-top: 35px: Jarak spasi kosong ke atas memisahkan barisan dots dari batas bawah kartu slider */
+    margin-top: 35px;
+}
+
+/* .dot-item-kustom: Mengatur fisik default masing-masing titik bulat indikator */
+.dot-item-kustom {
+    /* width & height 10px dengan border-radius 50%: Membuat bulatan kecil berdiameter 10 piksel */
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    /* background-color: #ccc: Warna default titik bulat abu-abu terang (menandakan halaman kartu tersebut sedang tidak aktif dilihat) */
+    background-color: #ccc;
+    /* transition: 0.3s: Animasi jeda waktu 0.3 detik saat titik berubah ukuran atau warna */
+    transition: 0.3s;
+}
+
+/* .dot-item-kustom.aktif: Aturan CSS khusus ketika sebuah titik bulat ditambahkan kelas '.aktif' oleh JavaScript */
+.dot-item-kustom.aktif {
+    /* background-color: #07f79b: Mengubah warna bulatan aktif menjadi hijau neon menyala cerah */
+    background-color: #07f79b;
+    /* width & height 14px: Memperbesar diameter bulatan aktif menjadi 14 piksel sebagai penanda halaman slider yang sedang dibuka */
+    width: 14px;
+    height: 14px;
+}
+
+/* ===================================================
+   RESPONSIVE UNTUK LAYAR HP
+   Aktif otomatis saat website dibuka di browser layar mobile di bawah 768px
+=================================================== */
+@media (max-width: 768px) {
+    
+    /* .kartu-vertikal dalam versi mobile HP */
+    .kartu-vertikal {
+        /* flex & width: calc(100vw - 110px): Rumus dinamis kustom agar lebar kartu otomatis menyesuaikan lebar total layar HP (Viewport Width) dikurangi spasi aman 110px agar kartu berikutnya sedikit mengintip di pinggir layar HP */
+        flex: 0 0 calc(100vw - 110px); 
+        width: calc(100vw - 110px);
+        /* height: 350px: Memendekkan sedikit tinggi kartu di layar HP biar ukurannya proporsional dan tidak kepanjangan memenuhi layar */
+        height: 350px;
+    }
+}
+
+/* ===================================================
+   CSS UNTUK POPUP DESTINASI (MODAL KUSTOM)
+=================================================== */
+
+/* 1. .modal-kustom: Latar belakang gelap transparan yang menutupi seluruh layar browser saat popup aktif */
+.modal-kustom {
+    /* display: none: Menyembunyikan total jendela popup saat halaman web pertama kali dibuka agar tidak mengganggu pemandangan */
+    display: none; 
+    /* position: fixed: Mengunci jendela melayang agar tegak kaku menutupi seluruh layar monitor meskipun halaman di-scroll ke atas bawah */
+    position: fixed; 
+    /* z-index: 99999: Mengunci angka lapisan paling tinggi di CSS agar kotak popup dipastikan berada di lapisan paling depan layar dan tidak tertutup elemen apa pun */
+    z-index: 99999; 
+    /* Mengunci posisi koordinat menempel penuh dari ujung kiri atas layar */
+    left: 0;
+    top: 0;
+    /* width & height 100%: Memaksa tirai latar belakang gelap melar penuh menyelimuti 100% lebar dan tinggi layar browser */
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.7): Memberikan warna tirai hitam pekat dengan tingkat transparansi 70% (efek blur gelap transparan) */
+    background-color: rgba(0, 0, 0, 0.7); 
+    align-items: center; 
+    justify-content: center;
+}
+
+/* 2. .konten-modal: Kotak putih utama di tengah layar tempat bernaungnya foto detail dan teks cerita destinasi */
+.konten-modal {
+    /* background-color: #ffffff: Mengatur warna dasar kotak modal menjadi putih bersih */
+    background-color: #ffffff;
+    /* padding: 30px: Jarak bantalan dalam kotak putih sebesar 30 piksel agar konten isi tidak menempel ke garis pinggir */
+    padding: 30px;
+    /* border-radius: 20px: Membuat keempat sudut pinggiran kotak putih menjadi melengkung bulat halus */
+    border-radius: 20px;
+    /* width: 90%: Kotak putih diperbolehkan elastis melebar mengikuti 90% lebar layar HP */
+    width: 90%;
+    /* max-width: 500px: Membatasi lebar maksimal kotak putih mentok di 500 piksel saat dibuka di laptop agar tidak melar kebesaran */
+    max-width: 500px; 
+    /* position: relative: Menjadi jangkar posisi bagi tombol silang penutup (X) yang menempel absolut di pojok kanan atas */
+    position: relative;
+    /* box-shadow: Memberikan efek bayangan hitam tegas di sekeliling kotak putih agar terlihat melayang kuat di atas tirai gelap */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    /* text-align: center: Membuat teks judul dan susunan elemen di dalam kotak menjadi rata tengah */
+    text-align: center;
+    /* animation: munculHalus 0.3s ease-out: Menghubungkan kotak dengan skenario animasi @keyframes bernama "munculHalus" selama 0.3 detik dengan gerakan melambat di akhir */
+    animation: munculHalus 0.3s ease-out; 
+}
+
+/* 3. .konten-modal img: Mengincar elemen gambar detail objek wisata yang ada di dalam kotak putih popup */
+.konten-modal img {
+    /* width: 100%: Memaksa foto melebar penuh memenuhi batas lebar internal kotak putih modal (max 500px) */
+    width: 100%;
+    /* height: 250px: Mengunci tinggi foto di dalam popup sepanjang 250 piksel */
+    height: 250px;
+    /* object-fit: cover: Trik aman memotong gambar otomatis agar foto detail tidak kelihatan gepeng/penyet di dalam kotak modal */
+    object-fit: cover; 
+    /* border-radius: 15px: Membuat sudut-sudut gambar detail menjadi melengkung estetik */
+    border-radius: 15px;
+    /* margin: 15px 0: Memberikan spasi jarak luar kosong (15px atas-bawah, 0 kiri-kanan) sebagai pemisah dari teks judul di atasnya */
+    margin: 15px 0;
+}
+
+/* 4. .konten-modal h3: Mengatur judul utama destinasi di dalam popup modal */
+.konten-modal h3 {
+    font-size: 24px;
+    color: #222;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+/* 5. .konten-modal p: Mengatur teks narasi cerita panjang penjelasan objek wisata di dalam popup modal */
+.konten-modal p {
+    /* font-size: 14px: Ukuran huruf disesuaikan agar pas dibaca santai oleh pengunjung */
+    font-size: 14px;
+    color: #555;
+    /* line-height: 1.6: Mengatur kerapatan spasi baris kalimat cerita agar rapi dan tidak menumpuk */
+    line-height: 1.6;
+    /* text-align: justify: Format tulisan rata kiri dan kanan otomatis biar susunan teks cerita terlihat rapi dan formal seperti di buku/laporan */
+    text-align: justify; 
+    margin: 0;
+}
+
+/* 6. .tombol-tutup: Mengatur simbol ikon silang (&times; alias huruf X) di pojok kanan atas kotak popup untuk menutup jendela */
+.tombol-tutup {
+    /* position: absolute: Memaksa ikon silang melayang bebas di pojok kanan atas kotak putih modal */
+    position: absolute;
+    /* Mengunci jarak koordinat presisi di pojok kanan atas */
+    top: 12px;
+    right: 20px;
+    /* font-size: 32px: Memperbesar ukuran simbol huruf X agar jelas terlihat dan gampang diklik oleh jari pengguna */
+    font-size: 32px;
+    /* font-weight: bold: Menebalkan simbol X */
+    font-weight: bold;
+    color: #999;
+    /* cursor: pointer: Mengubah kursor menjadi bentuk jari tangan menunjuk saat berada di atas simbol X */
+    cursor: pointer;
+    /* transition: 0.2s: Animasi jeda waktu perubahan warna saat menerima hover kursor */
+    transition: 0.2s;
+    line-height: 1;
+}
+
+/* .tombol-tutup:hover: Efek ketika kursor mouse didekatkan atau menyentuh simbol ikon silang X penutup */
+.tombol-tutup:hover {
+    /* color: #060289: Mengubah warna huruf X menjadi biru navy tua pekat sebagai indikator interaktif tombol siap diklik */
+    color: #1bc112; 
+}
+
+/* 7. @keyframes munculHalus: Skenario jalannya efek animasi pop-up pada kotak putih modal */
+@keyframes munculHalus {
+    /* Kondisi awal ("from"): Kotak modal dimulai dari ukuran mini 80% (`scale(0.8)`) dengan kondisi masih gaib/transparan (`opacity: 0`) */
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    /* Kondisi akhir ("to"): Kotak modal mengembang mulus ke ukuran asli 100% (`scale(1)`) dengan kondisi menyala solid (`opacity: 1`) */
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+#transportasi {
+    scroll-margin-top: 82px
+}
+
+
+/* Warna Biru Navy Pekat Sesuai Gambar */
+.bg-navy {
+    background-color: #0b2b5c !important;
+}
+
+/* Warna Oranye Kekuningan Tulisan "Perjalanan" */
+.text-warning-custom {
+    color: #fca311 !important;
+}
+
+/* Warna Biru Cerah Tulisan "Transportasi" */
+.text-primary-custom {
+    color: #1d3557 !important;
+}
+
+/* Efek Bayangan Teks Agar Tulisan Mudah Dibaca di Atas Gambar */
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+/* Mengatur Jarak Scroll Navbar Supaya Pas */
+#transportasi {
+    scroll-margin-top: 70px;
+}
