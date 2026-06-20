@@ -343,10 +343,10 @@ section {
     /* position: relative: Menjadi acuan koordinat bagi kotak teks deskripsi kustom (.konten-dalam-foto) yang menempel absolut di bawahnya */
     position: relative;
     /* flex: 0 0 290px: Mengunci ukuran basis flex kartu agar tidak bisa menciut atau melar dari ukuran asli 290 piksel */
-    flex: 0 0 290px; 
+    flex: 0 0 200px; 
     /* width & height: Mengunci ukuran dimensi kotak kartu setinggi 400px dan selebar 290px sesuai sketsa rancangan vertikal */
     width: 290px;    
-    height: 400px;   
+    height: 380px;   
     /* border-radius: 20px: Membuat keempat sudut pinggiran kartu menjadi melengkung bulat dan rapi */
     border-radius: 20px;
     /* overflow: hidden: Memotong ujung gambar destinasi di dalam agar ikut melengkung rapi sesuai sudut border-radius 20px kartu */
