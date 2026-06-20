@@ -332,7 +332,7 @@ section {
     /* display: flex: Mengaktifkan mode Flexbox agar semua kartu otomatis berjejer rapi ke samping kanan seperti gerbong kereta */
     display: flex;
     /* gap: 20px: Memberikan jarak pemisah antar kartu destinasi sejauh 20 piksel */
-    gap: 20px;
+    gap: 15px;
     /* transition: transform 0.5s ease-in-out: Efek animasi geser halus selama 0.5 detik saat JavaScript memindahkan urutan gerbong kartu */
     transition: transform 0.5s ease-in-out; 
     /* width: max-content: Memaksa lebar rel melar otomatis sepanjang total ukuran seluruh kartu yang berbaris di dalamnya */
@@ -344,9 +344,9 @@ section {
     /* position: relative: Menjadi acuan koordinat bagi kotak teks deskripsi kustom (.konten-dalam-foto) yang menempel absolut di bawahnya */
     position: relative;
     /* flex: 0 0 290px: Mengunci ukuran basis flex kartu agar tidak bisa menciut atau melar dari ukuran asli 290 piksel */
-    flex: 0 0 290px; 
+    flex: 0 0 cals(25% - 15px); 
     /* width & height: Mengunci ukuran dimensi kotak kartu setinggi 400px dan selebar 290px sesuai sketsa rancangan vertikal */
-    width: 290px;    
+    min-width: 210px;    
     height: 400px;   
     /* border-radius: 20px: Membuat keempat sudut pinggiran kartu menjadi melengkung bulat dan rapi */
     border-radius: 20px;
