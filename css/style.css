@@ -342,10 +342,10 @@ section {
 .kartu-vertikal {
     /* position: relative: Menjadi acuan koordinat bagi kotak teks deskripsi kustom (.konten-dalam-foto) yang menempel absolut di bawahnya */
     position: relative;
-    /* flex: 0 0 290px: Mengunci ukuran basis flex kartu agar tidak bisa menciut atau melar dari ukuran asli 290 piksel */
-    flex: 0 0 100px; 
+    /* flex: 0 0 310px: Mengunci ukuran basis flex kartu agar tidak bisa menciut atau melar dari ukuran asli 290 piksel */
+    flex: 0 0 310px; 
     /* width & height: Mengunci ukuran dimensi kotak kartu setinggi 400px dan selebar 290px sesuai sketsa rancangan vertikal */
-    width: 290px;    
+    width: 310px;    
     height: 380px;   
     /* border-radius: 20px: Membuat keempat sudut pinggiran kartu menjadi melengkung bulat dan rapi */
     border-radius: 20px;
