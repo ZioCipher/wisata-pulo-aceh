@@ -344,9 +344,9 @@ section {
     /* position: relative: Menjadi acuan koordinat bagi kotak teks deskripsi kustom (.konten-dalam-foto) yang menempel absolut di bawahnya */
     position: relative;
     /* flex: 0 0 265px: Mengunci ukuran basis flex kartu agar tidak bisa menciut atau melar dari ukuran asli 210 piksel */
-    flex: 0 0 240px; 
+    flex: 0 0 245px; 
     /* width & height: Mengunci ukuran dimensi kotak kartu setinggi 400px dan selebar 200px sesuai sketsa rancangan vertikal */
-    width: 240px;    
+    width: 245px;    
     height: 400px;   
     /* border-radius: 20px: Membuat keempat sudut pinggiran kartu menjadi melengkung bulat dan rapi */
     border-radius: 20px;
