@@ -326,13 +326,12 @@ section {
     /* width: 100%: Lebar jendela mengikuti penuh lebar container induknya */
     width: 100%;
 }
-
 /* .rel-slider: Wadah super panjang tempat seluruh 7 kartu destinasi berbaris horizontal menyamping */
 .rel-slider {
     /* display: flex: Mengaktifkan mode Flexbox agar semua kartu otomatis berjejer rapi ke samping kanan seperti gerbong kereta */
     display: flex;
-    /* gap: 20px: Memberikan jarak pemisah antar kartu destinasi sejauh 15 piksel */
-    gap: 15px;
+    /* gap: 20px: Memberikan jarak pemisah antar kartu destinasi sejauh 20 piksel */
+    gap: 20px;
     /* transition: transform 0.5s ease-in-out: Efek animasi geser halus selama 0.5 detik saat JavaScript memindahkan urutan gerbong kartu */
     transition: transform 0.5s ease-in-out; 
     /* width: max-content: Memaksa lebar rel melar otomatis sepanjang total ukuran seluruh kartu yang berbaris di dalamnya */
@@ -344,10 +343,9 @@ section {
     /* position: relative: Menjadi acuan koordinat bagi kotak teks deskripsi kustom (.konten-dalam-foto) yang menempel absolut di bawahnya */
     position: relative;
     /* flex: 0 0 290px: Mengunci ukuran basis flex kartu agar tidak bisa menciut atau melar dari ukuran asli 290 piksel */
-    flex: 0 0 230px; 
+    flex: 0 0 290px; 
     /* width & height: Mengunci ukuran dimensi kotak kartu setinggi 400px dan selebar 290px sesuai sketsa rancangan vertikal */
-    min-width: 210px;
-    max-width:280px;
+    width: 290px;    
     height: 400px;   
     /* border-radius: 20px: Membuat keempat sudut pinggiran kartu menjadi melengkung bulat dan rapi */
     border-radius: 20px;
@@ -355,7 +353,7 @@ section {
     overflow: hidden;
     /* box-shadow: Memberikan efek bayangan lembut di sekeliling kartu agar terlihat estetik dan timbul */
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
+
 
 /* .kartu-vertikal img: Mengincar file gambar objek wisata di dalam kartu vertikal */
 .kartu-vertikal img {
